@@ -11,9 +11,15 @@ function addCard() {
 
   const newCard = document.createElement('li');
   newCard.innerHTML = `
+    <div id="${title}-card">
     <h3>${title}</h3>
     <p>${description}</p>
     <img src=${image} />
+      <label>
+        <input type="checkbox" id="${title}-check" />
+        Já comprei
+      </label>
+    </div>
   `;
 
   cardList.appendChild(newCard);
