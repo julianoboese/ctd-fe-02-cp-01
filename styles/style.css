@@ -26,6 +26,7 @@ body {
   padding: 20px;
   background-color: rgb(142, 151, 171);
   padding: 32px;
+  font-family: 'DM Sans', sans-serif;
 }
 
 header {
@@ -38,28 +39,30 @@ header {
   font-family: 'DM Sans', sans-serif;
   text-align: center;
   color: rgb(6, 9, 14);
+  align-items: center;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
 }
 
 #container input,
 button {
   width: 100%;
-  height: 30px;
+  height: 45px;
   margin-top: 8px;
   font-style: normal;
   font-size: 20px;
   line-height: 15px;
-  width: 450px;
-  height: 55px;
   padding: 15px 15px;
   border: none;
   border-radius: 5px;
+  font-family: 'DM Sans', sans-serif;
 }
 
 #submit-card {
   padding: 15px 25px;
   border: unset;
-  border-radius: 15px;
-  color: rgb (125, 133, 151);
+  border-radius: 8px;
   z-index: 1;
   background: #6a7588;
   position: relative;
@@ -78,7 +81,7 @@ button::before {
   left: 0;
   height: 100%;
   width: 0;
-  border-radius: 15px;
+  border-radius: 8px;
   background-color: #212121;
   z-index: -1;
   -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
