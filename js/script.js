@@ -58,6 +58,16 @@ function addCard() {
   `;
 
   cardList.appendChild(newCard);
+
+  const card = document.getElementById(`${title}-card`);
+
+  document.getElementById(`${title}-check`).addEventListener('change', ({ target }) => {
+    if (target.checked) {
+      card.classList.add('opacity-25');
+    } else {
+      card.classList.remove('opacity-25');
+    }
+  });
 }
 
 submitButton.addEventListener('click', (event) => {
