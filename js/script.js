@@ -12,19 +12,26 @@ suggestionsButton.addEventListener('click', async () => {
   const response = await fetch(`https://damp-beach-97624.herokuapp.com/search?item=${item}`);
   const responseData = await response.json();
 
-  const images = responseData.results.splice(0, 3).map(({ urls }) => urls.small);
+  const imagesData = responseData.results.splice(0, 3).map(({ urls }) => urls.small);
 
-  images.forEach((imageUrl) => {
-    const newImage = document.createElement('img');
+  const images = document.createElement('div');
 
-    newImage.src = imageUrl;
+  imagesData.forEach((imageUrl) => {
+    const imageContainer = document.createElement('div');
+    imageContainer.className = 'block h-40 w-40 my-4 bg-center bg-cover rounded-lg p-2 shadow-lg cursor-pointer hover:scale-110 transition ease-in-out duration-300';
 
-    newImage.addEventListener('click', () => {
-      imageInput.value = newImage.src;
+    imageContainer.style.backgroundImage = `url(${imageUrl})`;
+
+    imageContainer.addEventListener('click', () => {
+      imageInput.value = imageContainer.style.backgroundImage.slice(5, -2);
+      imageSuggestions.innerHTML = '';
     });
 
-    imageSuggestions.appendChild(newImage);
+    images.appendChild(imageContainer);
   });
+
+  imageSuggestions.innerHTML = '';
+  imageSuggestions.appendChild(images);
 });
 
 function addCard() {
