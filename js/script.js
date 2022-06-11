@@ -80,4 +80,7 @@ function addCard() {
 submitButton.addEventListener('click', (event) => {
   event.preventDefault();
   addCard();
+  titleInput.value = '';
+  descriptionInput.value = '';
+  imageInput.value = '';
 });
