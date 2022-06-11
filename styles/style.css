@@ -1,0 +1,101 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  padding: 20px;
+  background-color: rgb(142, 151, 171);
+  padding: 32px;
+}
+
+header {
+  max-width: 400px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+#titulo {
+  font-family: 'DM Sans', sans-serif;
+  text-align: center;
+  color: rgb(6, 9, 14);
+}
+
+#container input,
+button {
+  width: 100%;
+  height: 30px;
+  margin-top: 8px;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 15px;
+  width: 450px;
+  height: 55px;
+  padding: 15px 15px;
+  border: none;
+  border-radius: 5px;
+}
+
+#submit-card {
+  padding: 15px 25px;
+  border: unset;
+  border-radius: 15px;
+  color: rgb (125, 133, 151);
+  z-index: 1;
+  background: #6a7588;
+  position: relative;
+  font-weight: 1000;
+  font-size: 17px;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  transition: all 250ms;
+  overflow: hidden;
+}
+
+button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  border-radius: 15px;
+  background-color: #212121;
+  z-index: -1;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  transition: all 250ms;
+}
+
+button:hover {
+  color: #e8e8e8;
+}
+
+button:hover::before {
+  width: 100%;
+}
+
+main {
+  max-width: 400px;
+  text-align: center;
+  margin: 32px auto 0;
+}
