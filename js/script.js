@@ -32,13 +32,25 @@ function addCard() {
   const description = descriptionInput.value;
   const image = imageInput.value;
 
-  const newCard = document.createElement('li');
+  const newCard = document.createElement('div');
+  newCard.id = `${title}-card`;
+  newCard.className = 'h-48 w-full lg:w-5/12 flex flex-row';
+
   newCard.innerHTML = `
-    <div id="${title}-card">
-      <h3>${title}</h3>
-      <p>${description}</p>
-      <img src=${image} />
-      <label>
+    <div
+      class="basis-2/5 bg-center bg-cover rounded-t-none rounded-l"
+      style="
+        background-image: url(${image});
+      "
+    ></div>
+    <div
+      class="basis-3/5 border-r border-b border-gray-400 border-l-0 border-t bg-white rounded-b-none rounded-r p-4 flex flex-col justify-between transition ease-in-out duration-300"
+    >
+      <div class="mb-4 overflow-y-auto">
+        <h3 class="text-gray-900 font-bold text-xl mb-2">${title}</h3>
+        <p class="text-gray-700 text-base">${description}</p>
+      </div>
+      <label for="${title}-check" class="text-sm text-gray-900">
         <input type="checkbox" id="${title}-check" />
         Já comprei
       </label>
