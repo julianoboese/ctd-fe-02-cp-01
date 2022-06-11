@@ -19,7 +19,7 @@ suggestionsButton.addEventListener('click', async () => {
   const response = await fetch(`https://damp-beach-97624.herokuapp.com/search?item=${item}`);
   const responseData = await response.json();
 
-  const imagesData = responseData.results.splice(0, 3).map(({ urls }) => urls.small);
+  const imagesData = responseData.images_results.splice(0, 3).map((image) => image.thumbnail);
 
   const images = document.createElement('div');
 
