@@ -26,17 +26,17 @@ body {
   padding: 20px;
   background-color: rgb(142, 151, 171);
   padding: 32px;
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 header {
-  max-width: 400px;
+  max-width: 500px;
   text-align: center;
   margin: 0 auto;
 }
 
 #titulo {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   text-align: center;
   color: rgb(6, 9, 14);
   align-items: center;
@@ -56,7 +56,7 @@ button {
   padding: 15px 15px;
   border: none;
   border-radius: 5px;
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 #submit-card {
@@ -98,7 +98,58 @@ button:hover::before {
 }
 
 main {
-  max-width: 400px;
   text-align: center;
   margin: 32px auto 0;
+}
+
+#card-list {
+  display: flex;
+  gap: 32px;
+}
+
+#card-list li img {
+  height: 350px;
+  object-fit: cover;
+  border-radius: 6px;
+  transition: 200ms;
+  filter: brightness(0.7);
+}
+
+#card-list li img:hover {
+  transform: scale(1.05);
+  filter: brightness(1);
+}
+
+#card-list li {
+  position: relative;
+}
+
+#card-list li h3 {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 10px;
+  left: 6px;
+  border-radius: 6px;
+  background-color: white;
+  padding: 6px 16px;
+  height: auto;
+  align-items: center;
+  width: fit-content;
+  font-weight: 800;
+}
+
+#card-list li p {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  bottom: 10px;
+  left: 2px;
+  border-radius: 6px;
+  background-color: white;
+  padding: 6px 16px;
+  height: auto;
+  align-items: center;
+  width: fit-content;
+  font-weight: normal;
 }
