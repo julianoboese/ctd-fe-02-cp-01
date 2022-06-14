@@ -48,7 +48,7 @@ function addCard() {
 
   const newCard = document.createElement('div');
   newCard.id = `${title}-card`;
-  newCard.className = 'h-48 w-full lg:w-5/12 flex flex-row';
+  newCard.className = 'h-48 w-full lg:w-5/12 flex flex-row hover:scale-105 transition ease-in-out duration-300';
 
   newCard.innerHTML = `
     <div
@@ -58,7 +58,7 @@ function addCard() {
       "
     ></div>
     <div
-      class="basis-3/5 border-r border-b border-gray-400 border-l-0 border-t bg-white rounded-b-none rounded-r p-4 flex flex-col justify-between transition ease-in-out duration-300"
+      class="basis-3/5 border-r border-b border-gray-400 border-l-0 border-t bg-white rounded-b-none rounded-r p-4 flex flex-col justify-between"
     >
       <div class="mb-4 overflow-y-auto">
         <h3 class="text-gray-900 font-bold text-xl mb-2">${title}</h3>
